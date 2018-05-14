@@ -3,4 +3,23 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorDividerDark">#878787</color>
+    <color name="colorDividerLightDart">#B2B2B2</color>
+    <color name="colorDivider">#CCCCCC</color>
+    <color name="colorDividerLight">#DDDDDD</color>
+
+    <color name="colorTextDark">#494949</color>
+    <color name="colorText">#878787</color>
+    <color name="colorTextLite">#BBBBBB</color>
+    <color name="colorTextLight">#BFBFBF</color>
+
+    <color name="colorBackground">#F7F7F7</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteLite">#B3FFFFFF</color>
+    <color name="colorWhiteTooLite">#80FFFFFF</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackTooLite">#80000000</color>
 </resources>

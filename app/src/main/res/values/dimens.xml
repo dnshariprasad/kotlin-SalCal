@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="page_padding">16dp</dimen>
-    <dimen name="divider_padding">8dp</dimen>
+
+    <dimen name="distance_small">4dp</dimen>
+    <dimen name="distance_normal">8dp</dimen>
+    <dimen name="distance_medium">12dp</dimen>
+    <dimen name="distance_large">16dp</dimen>
+
+    <dimen name="textNormal">12sp</dimen>
+    <dimen name="textHeading">14sp</dimen>
 </resources>
