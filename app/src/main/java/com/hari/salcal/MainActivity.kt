@@ -16,8 +16,9 @@ class MainActivity : BaseActivity() {
             for (i in 5..100 step 5) {
                 val yearIncrement: Int = ((i / 100.0) * sal).toInt()
                 val monthIncrement: Int = yearIncrement / 12
-                val newSal: Int = (yearIncrement + sal).toInt()
-                salList.add(Increment(i.toString() + "%", monthIncrement.toString(), yearIncrement.toString(), newSal.toString()))
+                val yearSal: Int = (yearIncrement + sal).toInt()
+                val monthSal: Int = yearSal / 12
+                salList.add(Increment(i.toString() + "%", monthIncrement.toString(), monthSal.toString(), yearIncrement.toString(), yearSal.toString()))
             }
             increment_rv.layoutManager = GridLayoutManager(this, 3)
             increment_rv.adapter = IncrementAdapter(this, salList)

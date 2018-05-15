@@ -36,6 +36,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/percentage_tv"
+            tools:text="6000" />
+
+        <TextView
+            android:id="@+id/sal_month_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_small"
+            android:gravity="right"
+            android:textSize="@dimen/textNormal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/month_incremented_tv"
             tools:text="60000" />
 
         <TextView
@@ -47,12 +59,12 @@
             android:textSize="@dimen/textNormal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/month_incremented_tv"
-            tools:text="60000" />
+            app:layout_constraintTop_toBottomOf="@+id/sal_month_tv"
+            tools:text="600000" />
 
 
         <TextView
-            android:id="@+id/effective_sal_tv"
+            android:id="@+id/sal_year_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="end"
