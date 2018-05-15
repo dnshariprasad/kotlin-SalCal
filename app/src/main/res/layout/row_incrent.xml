@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="@dimen/distance_normal"--><!--android:layout_marginEnd="@dimen/distance_small"--><!--android:layout_marginRight="@dimen/distance_normal"--><!--android:layout_marginStart="@dimen/distance_small">-->
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -61,5 +61,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/year_incremented_tv"
             tools:text="6000000" />
-    </android.support.constraint.ConstraintLayout><!--</android.support.v7.widget.CardView>-->
+    </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>
