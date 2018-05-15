@@ -18,47 +18,62 @@
 
         <TextView
             android:id="@+id/percentage_tv"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorTextDark"
             android:textSize="@dimen/textHeading"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="5%" />
 
-        <TextView
-            android:id="@+id/month_incremented_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/distance_small"
-            android:gravity="right"
-            android:textSize="@dimen/textNormal"
+        <View
+            android:id="@+id/sal_view"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/colorDividerLight"
+            app:layout_constraintBottom_toBottomOf="@+id/sal_year_tv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/percentage_tv" />
+
+        <TextView
+            android:id="@+id/month_incremented_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/distance_small"
+            android:layout_marginRight="@dimen/distance_small"
+            android:layout_marginTop="@dimen/distance_small"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/textNormal"
+            app:layout_constraintEnd_toEndOf="@+id/sal_view"
             app:layout_constraintTop_toBottomOf="@+id/percentage_tv"
             tools:text="6000" />
 
         <TextView
             android:id="@+id/sal_month_tv"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance_small"
+            android:layout_marginStart="@dimen/distance_small"
             android:layout_marginTop="@dimen/distance_small"
-            android:gravity="right"
+            android:textColor="@color/colorTextDark"
             android:textSize="@dimen/textNormal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/month_incremented_tv"
+            app:layout_constraintStart_toStartOf="@+id/sal_view"
+            app:layout_constraintTop_toBottomOf="@+id/percentage_tv"
             tools:text="60000" />
 
         <TextView
             android:id="@+id/year_incremented_tv"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/distance_small"
+            android:layout_marginRight="@dimen/distance_small"
             android:layout_marginTop="@dimen/distance_small"
             android:gravity="end"
+            android:textColor="@color/colorText"
             android:textSize="@dimen/textNormal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/sal_view"
             app:layout_constraintTop_toBottomOf="@+id/sal_month_tv"
             tools:text="600000" />
 
@@ -67,11 +82,15 @@
             android:id="@+id/sal_year_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance_small"
+            android:layout_marginStart="@dimen/distance_small"
             android:gravity="end"
             android:textColor="@color/colorTextDark"
             android:textSize="@dimen/textNormal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/year_incremented_tv"
+            app:layout_constraintStart_toStartOf="@+id/sal_view"
+            app:layout_constraintTop_toTopOf="@+id/year_incremented_tv"
             tools:text="6000000" />
+
+
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

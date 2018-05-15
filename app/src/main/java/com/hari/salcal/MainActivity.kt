@@ -20,7 +20,7 @@ class MainActivity : BaseActivity() {
                 val monthSal: Int = yearSal / 12
                 salList.add(Increment(i.toString() + "%", monthIncrement.toString(), monthSal.toString(), yearIncrement.toString(), yearSal.toString()))
             }
-            increment_rv.layoutManager = GridLayoutManager(this, 3)
+            increment_rv.layoutManager = GridLayoutManager(this, 2)
             increment_rv.adapter = IncrementAdapter(this, salList)
         }
     }
