@@ -14,8 +14,9 @@ class IncrementAdapter(val context: Context, val items: List<Increment>) : Recyc
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.incrementTv?.text = items.get(position).percentage
-        holder.incrementByAmountTv?.text = items.get(position).incrementedByAmount
-        holder.effectiveSalTv?.text = items.get(position).effectiveSal
+        holder.yearIncrementTv?.text = "Y ${items.get(position).yearIncrement}"
+        holder.monthIncrementTv?.text = "M ${items.get(position).monthIncrement}"
+        holder.effectiveSalTv?.text = "E ${items.get(position).effectiveSal}"
     }
 
     override fun getItemCount(): Int {
@@ -25,6 +26,7 @@ class IncrementAdapter(val context: Context, val items: List<Increment>) : Recyc
 
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val incrementTv = view.percentage_tv
-    val incrementByAmountTv = view.incremented_by_amount_tv
+    val yearIncrementTv = view.year_incremented_tv
+    val monthIncrementTv = view.month_incremented_tv
     val effectiveSalTv = view.effective_sal_tv
 }

@@ -1,10 +1,7 @@
 package com.hari.salcal
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
-import android.view.View
-import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -17,11 +14,12 @@ class MainActivity : BaseActivity() {
             val salList = mutableListOf<Increment>()
             val sal = sal_et?.text?.toString()?.toDouble() ?: 0.0
             for (i in 5..100 step 5) {
-                val incrementByAmount = (i / 100.0) * sal
-                val newSal = incrementByAmount + sal
-                salList.add(Increment(i.toString() + "%", incrementByAmount.toString(), newSal.toString()))
+                val yearIncrement: Int = ((i / 100.0) * sal).toInt()
+                val monthIncrement: Int = yearIncrement / 12
+                val newSal: Int = (yearIncrement + sal).toInt()
+                salList.add(Increment(i.toString() + "%", monthIncrement.toString(), yearIncrement.toString(), newSal.toString()))
             }
-            increment_rv.layoutManager = GridLayoutManager(this, 2)
+            increment_rv.layoutManager = GridLayoutManager(this, 3)
             increment_rv.adapter = IncrementAdapter(this, salList)
         }
     }
