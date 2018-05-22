@@ -13,7 +13,7 @@ class MainActivity : BaseActivity() {
             hideKeyboard()
             val salList = mutableListOf<Increment>()
             val sal = sal_et?.text?.toString()?.toDouble() ?: 0.0
-            for (i in 5..100 step 5) {
+            for (i in 0..100 step 5) {
                 val yearIncrement: Int = ((i / 100.0) * sal).toInt()
                 val monthIncrement: Int = yearIncrement / 12
                 val yearSal: Int = (yearIncrement + sal).toInt()
