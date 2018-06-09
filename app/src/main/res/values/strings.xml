@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">SalCal</string>
-    <string name="hint_salary">Salary</string>
+    <string name="hint_salary">Annual Income</string>
 </resources>

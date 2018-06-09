@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.row_incrent.view.*
 
-class IncrementAdapter(val context: Context, val items: List<Increment>) : RecyclerView.Adapter<ViewHolder>() {
+class IncrementAdapter(val context: Context, val items: List<Increment>) : RecyclerView.Adapter<IncrementAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.row_incrent, parent, false))
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: IncrementAdapter.ViewHolder, position: Int) {
         holder.incrementTv?.text = items.get(position).percentage
         holder.yearIncrementTv?.text = items.get(position).incrementPerYear
         holder.monthIncrementTv?.text = items.get(position).incrementPerMonth
@@ -23,12 +23,22 @@ class IncrementAdapter(val context: Context, val items: List<Increment>) : Recyc
     override fun getItemCount(): Int {
         return items.size
     }
+
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
+        val incrementTv = view.percentage_tv
+        val yearIncrementTv = view.year_incremented_tv
+        val salMonthTv = view.sal_month_tv
+        val monthIncrementTv = view.month_incremented_tv
+        val effectiveSalTv = view.sal_year_tv
+
+        init {
+            view.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            context.startActivity(IncrementDetailActivity.newIntent(context, items[layoutPosition]));
+        }
+    }
 }
 
-class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val incrementTv = view.percentage_tv
-    val yearIncrementTv = view.year_incremented_tv
-    val salMonthTv = view.sal_month_tv
-    val monthIncrementTv = view.month_incremented_tv
-    val effectiveSalTv = view.sal_year_tv
-}
+
